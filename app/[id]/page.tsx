@@ -1,4 +1,6 @@
+
 import React from 'react'
+import View from "@/features/list/view";
 
 export const page = () => {
 interface Task{
@@ -7,9 +9,7 @@ interface Task{
     description: string;
 }
 
-  return (
-    <div>page</div>
-  )
+  return <View />
 }
 
 
