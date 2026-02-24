@@ -59,7 +59,7 @@ export const View = () => {
           
             <div className="flex gap-2 justify-end mt-4 pt-4 ">
               <Link
-                href={`/${task.id}/edit`}
+                href={`/${task.id}/view-details`}
                 className=" text-gray-600 p-2 rounded 
                 hover:bg-gray-600 animation duration-300 ease-in-out hover:text-white 
                 w-10 h-10 flex items-center justify-center"

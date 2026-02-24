@@ -35,9 +35,11 @@ export const Viewdetails = ({ id }: { id: string }) => {
       p-8">
         <div className="flex flex-row gap-4 mt-4 items-center">
           <h1 className="text-2xl font-bold">{task.title}</h1>
-          <Link href={`/edit/${task.id}`} className="flex items-center gap-2">
+
+          <Link href={`/${task.id}/edit`} className="flex items-center gap-2">
             <Pencil size={20} className="bg-blue-500 text-white p-2 rounded w-10 h-10" />
           </Link>
+
         </div>
 
         <div className="mt-4">
