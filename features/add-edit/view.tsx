@@ -67,16 +67,16 @@ export const View = () => {
           </div>
 
           
-          <div className="flex justify-end space-x-2 mt-4">
+          <div className="flex justify-center space-x-2 text-center mt-4">
             <button
               onClick={handleSubmit}
-              className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md transition"
+              className="flex-1 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md transition"
             >
               Save
             </button>
             <Link
               href="/"
-              className="bg-gray-200 hover:bg-gray-300 text-gray-700 px-4 py-2 rounded-md transition"
+              className="flex-1 bg-gray-200 hover:bg-gray-300  text-gray-700 px-4 py-2 rounded-md transition"
             >
               Cancel
             </Link>

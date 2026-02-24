@@ -5,6 +5,7 @@ import { CirclePlus, Pencil, Trash, TriangleAlert } from 'lucide-react'
 import Link from 'next/link'
 import { useAtom } from 'jotai'
 import { listNotesAtom } from '@/atoms/atom'
+import Header from '@/coponents/header'
 
 export const View = () => {
   const [allTasks, setAllTasks] = useAtom(listNotesAtom)
@@ -25,8 +26,9 @@ export const View = () => {
 
   return (
     <div className="p-8">
-     
+     <Header/>
       <header className="flex justify-end mb-5">
+        
         <Link href="/add">
           <CirclePlus
             size={20}
@@ -36,7 +38,12 @@ export const View = () => {
       </header>
 
     
-      <main className="flex flex-row gap-4 w-full mt-5">
+      <main className="
+      grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 
+      lg:grid-cols-4 
+      xl:grid-cols-5 
+      2xl:grid-cols-6
+      3xl:grid-cols-7 gap-4 w-full mt-5">
         {allTasks.map(task => (
           <div
             key={task.id}
