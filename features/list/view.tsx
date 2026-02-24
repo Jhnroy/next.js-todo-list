@@ -64,7 +64,7 @@ export const View = () => {
             </div>
 
           
-            <div className="flex gap-2 justify-end mt-4 pt-4 ">
+            <div className="flex gap-2 justify-end mt-4 pt-4 border-t border-gray-200">
               <Link
                 href={`/${task.id}/view-details`}
                 className=" text-gray-600 p-2 rounded 

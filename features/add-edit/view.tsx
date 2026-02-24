@@ -2,16 +2,27 @@
 
 import { ArrowLeft } from 'lucide-react'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useAtom } from 'jotai'
 import { listNotesAtom } from '@/atoms/atom'
-import { useRouter } from 'next/navigation'
+import { useParams, useRouter } from 'next/navigation'
 
 export const View = () => {
+  const {id} = useParams()
   const router = useRouter()
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
   const [allTasks, setAllTasks] = useAtom(listNotesAtom)
+
+
+  useEffect(() => {
+    const task = allTasks.find((t) => t.id === Number(id))
+    if (task) {
+      setTitle(task.title)
+      setDescription(task.notes)
+    }
+    
+  }, [id, allTasks])
 
   const handleSubmit = () => {
     setAllTasks((tasks) => [
