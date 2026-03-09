@@ -12,7 +12,7 @@ export default function Header() {
   }
 
   return (
-    <header className="flex items-center justify-between font-bold text-2xl">
+    <header className="flex items-center justify-between font-bold text-5xl">
     
       <h1>My Tasks</h1>
       
